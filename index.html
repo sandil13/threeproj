@@ -22,21 +22,6 @@
       color: white;
     }
 
-    .container {
-      position: relative;
-      width: 80vw;
-      max-width: 1200px;
-      aspect-ratio: 3 / 2; /* Примерное соотношение сторон для контейнера */
-      background: transparent;
-    }
-
-    .skr {
-      position: absolute;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
     /* Первый фон (fr.png) */
     .skr.fr {
       top: 0;
@@ -57,36 +42,6 @@
       z-index: 2;
     }
 
-    /* Крюки (hook.png) */
-    .skr.hook-left {
-      top: 5%;
-      left: 10%;
-      width: 80px;
-      height: 20%;
-      background-image: url('hook.png');
-      z-index: 3;
-    }
-
-    .skr.hook-right {
-      top: 5%;
-      right: 10%;
-      width: 80px;
-      height: 20%;
-      background-image: url('hook.png');
-      z-index: 3;
-    }
-
-    /* Текст */
-    .text {
-      position: absolute;
-      bottom: 10%;
-      left: 10%;
-      width: 80%;
-      font-size: 1.2rem;
-      z-index: 4;
-      text-align: center;
-      line-height: 1.4;
-    }
 
     /* Адаптив для маленьких экранов */
     @media (max-width: 600px) {
@@ -99,32 +54,15 @@
         top: 30%;
         left: 5%;
         width: 90%;
-        height: 40%;
+        height: 60%;
       }
 
-      .skr.hook-left,
-      .skr.hook-right {
-        width: 50px;
-        height: 15%;
-      }
 
-      .text {
-        font-size: 1rem;
-        bottom: 5%;
-        width: 90%;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
     <div class="skr fr"></div>
     <div class="skr kar"></div>
-    <div class="skr hook-left"></div>
-    <div class="skr hook-right"></div>
-    <p class="text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-    </p>
-  </div>
 </body>
 </html>

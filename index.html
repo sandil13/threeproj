@@ -8,29 +8,9 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
-      background: black;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
 
-    /* Контейнер с фиксированным соотношением сторон */
-    .container {
-      position: relative; /* для абсолютного позиционирования детей */
-      width: 80vw; /* адаптивная ширина */
-      max-width: 800px; /* максимальная ширина */
-      aspect-ratio: 16 / 9; /* фиксированное соотношение сторон, можно изменить под ваши изображения */
-      background: transparent;
-      overflow: visible;
-    }
 
     /* Общие стили для фоновых блоков */
     .skr {
@@ -42,8 +22,6 @@
 
     /* Второй фон (кар.png) - позиционируется относительно контейнера */
     .skr.kar {
-      top: 25%;
-      left: 10%;
       width: 90%;
       height: 80%;
       background-image: url('кар.png');

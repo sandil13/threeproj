@@ -40,22 +40,12 @@
       background-position: center;
     }
 
-    /* Первый фон (fr.png) - занимает весь контейнер */
-    .skr.fr {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('fr.png');
-      z-index: 2;
-    }
-
     /* Второй фон (кар.png) - позиционируется относительно контейнера */
     .skr.kar {
       top: 25%;
       left: 10%;
-      width: 70%;
-      height: 60%;
+      width: 90%;
+      height: 80%;
       background-image: url('кар.png');
       z-index: 1;
     }
@@ -78,7 +68,6 @@
 </head>
 <body>
   <div class="container">
-    <div class="skr fr"></div>
     <div class="skr kar"></div>
   </div>
 </body>

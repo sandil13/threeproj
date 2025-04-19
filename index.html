@@ -22,7 +22,25 @@
       color: white;
     }
 
-    /* Первый фон (fr.png) */
+    /* Контейнер с фиксированным соотношением сторон */
+    .container {
+      position: relative; /* для абсолютного позиционирования детей */
+      width: 80vw; /* адаптивная ширина */
+      max-width: 800px; /* максимальная ширина */
+      aspect-ratio: 16 / 9; /* фиксированное соотношение сторон, можно изменить под ваши изображения */
+      background: transparent;
+      overflow: visible;
+    }
+
+    /* Общие стили для фоновых блоков */
+    .skr {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    /* Первый фон (fr.png) - занимает весь контейнер */
     .skr.fr {
       top: 0;
       left: 0;
@@ -32,7 +50,7 @@
       z-index: 1;
     }
 
-    /* Второй фон (кар.png) */
+    /* Второй фон (кар.png) - позиционируется относительно контейнера */
     .skr.kar {
       top: 25%;
       left: 10%;
@@ -42,12 +60,11 @@
       z-index: 2;
     }
 
-
     /* Адаптив для маленьких экранов */
     @media (max-width: 600px) {
       .container {
         width: 95vw;
-        aspect-ratio: auto;
+        aspect-ratio: 16 / 9; /* можно менять, если нужно */
       }
 
       .skr.kar {
@@ -56,13 +73,14 @@
         width: 90%;
         height: 60%;
       }
-
-
     }
   </style>
 </head>
 <body>
+  <div class="container">
     <div class="skr fr"></div>
     <div class="skr kar"></div>
+  </div>
 </body>
 </html>
+
